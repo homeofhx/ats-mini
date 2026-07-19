@@ -1,7 +1,3 @@
-// =================================
-// INCLUDE FILES
-// =================================
-
 #include "Common.h"
 #include <Wire.h>
 #include "Rotary.h"
@@ -224,18 +220,7 @@ void setup()
   rx.setAudioMuteMcuPin(AUDIO_MUTE);
 
   // If loading preferences fails...
-  if(!prefsLoad(SAVE_SETTINGS|SAVE_VERIFY))
-  {
-    // Save default preferences
-    prefsSave(SAVE_SETTINGS);
-    // Show initial screen with the QR code
-    spr.fillSprite(TH.bg);
-    ledcWrite(PIN_LCD_BL, currentBrt);
-    drawAboutHelp(0);
-    // Wait for an encoder click
-    while(digitalRead(ENCODER_PUSH_BUTTON)!=LOW) delay(100);
-    while(digitalRead(ENCODER_PUSH_BUTTON)==LOW) delay(100);
-  }
+  if(!prefsLoad(SAVE_SETTINGS|SAVE_VERIFY)) prefsSave(SAVE_SETTINGS);   // Save default preferences
 
   // If loading memories fails, save default memories
   if(!prefsLoad(SAVE_MEMORIES|SAVE_VERIFY)) prefsSave(SAVE_MEMORIES);

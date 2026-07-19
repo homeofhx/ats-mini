@@ -676,11 +676,9 @@ static void doScrollDir(int16_t enc)
   scrollDirection = (scrollDirection == 1) ? -1 : 1;
 }
 
-uint8_t doAbout(int16_t enc)
-{
-  static uint8_t aboutScreen = 0;
-  aboutScreen = clamp_range(aboutScreen, enc, 0, 2);
-  return aboutScreen;
+uint8_t doAbout(int16_t enc) {
+  (void)enc;
+  return 2; // SYSTEM page only
 }
 
 bool tuneToMemory(const Memory *memory)

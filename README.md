@@ -1,5 +1,11 @@
 # ATS Mini
 
+> [!IMPORTANT]
+>
+> This is a fork of [esp32-si4732/ats-mini](https://github.com/esp32-si4732/ats-mini) that's modified for my personal preferences.
+>
+> As for now, to see the modifications I made to the original firmware, check [my commits and their messages](https://github.com/homeofhx/ats-mini/commits/main/?author=homeofhx).
+
 ![](docs/source/_static/esp32-si4732-ui-theme.jpg)
 
 This firmware is for use on the SI4732 (ESP32-S3) Mini/Pocket Receiver

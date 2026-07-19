@@ -32,13 +32,12 @@ const char *getVersion(bool shorter)
 {
   static char versionString[35] = "\0";
 
-  sprintf(versionString, "%s%sF/W: v%1.1d.%2.2d %s",
+  sprintf(versionString, "%s%sF/W (homeofhx): v%1.1d.%2.2d %s",
     shorter ? "" : RECEIVER_NAME,
     shorter ? "" : " ",
     VER_APP / 100,
     VER_APP % 100,
-    __DATE__
-  );
+    __DATE__);
 
   return(versionString);
 }
