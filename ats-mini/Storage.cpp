@@ -261,6 +261,8 @@ bool prefsLoad(uint32_t items)
     SsbSoftMuteIdx = prefs.getUChar("SsbSoftMute", SsbSoftMuteIdx); // SSB soft mute
     currentSleep   = prefs.getUShort("Sleep", currentSleep);    // Sleep delay
     themeIdx       = prefs.getUChar("Theme", themeIdx);         // Color theme
+    if(themeIdx >= getTotalThemes()) themeIdx = 0;   // Safe fallback from other firmware
+    prefs.putUChar("Theme", themeIdx);   // Safety
     rdsModeIdx     = prefs.getUChar("RDSMode", rdsModeIdx);     // RDS mode
     sleepModeIdx   = prefs.getUChar("SleepMode", sleepModeIdx); // Sleep mode
     zoomMenu       = prefs.getUChar("ZoomMenu", zoomMenu);      // TRUE: Zoom menu

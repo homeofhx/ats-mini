@@ -127,17 +127,15 @@ static const char *menu[] =
 #define MENU_WIFIMODE     14
 #define MENU_ABOUT        15
 
-
 int8_t settingsIdx = MENU_BRIGHTNESS;
 
-static const char *settings[] =
-{
+static const char *settings[] = {
   "Brightness",
   "Calibration",
   "RDS",
   "UTC Offset",
   "FM Region",
-  "Theme",
+  "Appearance",
   "UI Layout",
   "Zoom Menu",
   "Scroll Dir.",
